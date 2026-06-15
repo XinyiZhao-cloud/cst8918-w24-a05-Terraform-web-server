@@ -28,7 +28,7 @@ variable "labelPrefix" {
 }
 
 variable "region" {
-  default = "canadacentral"
+  default = "westus3"
 }
 
 variable "admin_username" {
@@ -149,7 +149,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                = "${var.labelPrefix}-vm"
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.region
-  size                = "Standard_B1s"
+  size                = "Standard_B2ats_v2"
 
   admin_username = var.admin_username
 
